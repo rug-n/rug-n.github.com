@@ -50,6 +50,22 @@
     <div class="container">
       <h1>Treffen im Rückblick</h1>
       <p>
+
+      <div id="nav-annual">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#2013">2013</a>
+          </li>
+          <li>
+            <a href="#2012">2012</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="tab-content">
+        <div id="2013" class="tab-pane active">
+
       <table class="table table-striped">
         <thead>
           <tr>
@@ -138,6 +154,21 @@
           </td>
           <td><a href="http://www.dcs-fuerth.de/">DCS - Die Entwickler</a></td>
         </tr>
+      </table>
+
+           </div> <!-- tab-pane #2013 -->
+           <div id="2012" class="tab-pane">
+
+          <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Wann?</th>
+            <th>Was?</th>
+            <th>Wo?</th>
+          </tr>
+        </thead>
+
+
 
         <tr>
           <td>21. November 2012</td>
@@ -225,6 +256,9 @@
 
       </table>
 
+      </div> <!-- tab-pane 2012 -->
+      </div>
+
       <hr/>
 
       <footer>
@@ -232,9 +266,17 @@
       </footer>
 
     </div> <!-- /container -->
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-transition.js"></script>
     <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+
+    <script type="text/javascript">
+      $('#nav-annual a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+      });
+    </script>
+
   </body>
 </html>
